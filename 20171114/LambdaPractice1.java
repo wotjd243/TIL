@@ -7,13 +7,13 @@ import java.util.List;
 public class LambdaPractice1 {
 
 	public static void main(String[] args) {
-		final List<Student> studentList = getStudentList();
+		List<Student> studentList = getStudentList();
 		whoHasHighScore(studentList);
 	}
 
 	static void whoHasHighScore(List<Student> studentList) {
 		Student highScoreStudent = new Student(0, "", 0);
-		for (final Student student : studentList) {
+		for (Student student : studentList) {
 			if (student.getScore() > highScoreStudent.getScore()) {
 				highScoreStudent = student;
 			}
